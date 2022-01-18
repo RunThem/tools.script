@@ -11,8 +11,7 @@ buf=$(tokei --sort code .)
 
 printf "Tokei T(%.2fs)\n" $(echo "($(date +%N) - ${time}) * 0.000000001" | bc)
 
-for line in ${buf}
-do
+for line in ${buf}; do
   echo ${line::53}
 done
 
